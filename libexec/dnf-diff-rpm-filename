@@ -41,10 +41,6 @@ case $(file -i "$rpmfile") in
     *) die "$rpmfile must be application/x-rpm file" ;;
 esac
 
-workdir=$HOME/.cache/dnf-diff
-
-mkdir -p "$workdir"
-
 cachedir=$workdir/${base%%.rpm}
 
 test -d "$cachedir" || (
